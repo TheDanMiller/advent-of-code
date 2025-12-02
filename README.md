@@ -1,10 +1,13 @@
 # 🎄 Advent of Code - TypeScript
 
-My solutions for [Advent of Code](https://adventofcode.com/) written in TypeScript.
+My solutions for [Advent of Code](https://adventofcode.com/) written in TypeScript. I used AI to scaffold the project structure and utility functions to speed up development.
+
+The solutions are all written by a human (me!), without AI assistance.
 
 ## Setup
 
 ### Prerequisites
+
 - Node.js 18+ or Bun
 - npm or yarn
 
@@ -19,11 +22,13 @@ npm install
 ### Running Solutions
 
 Run a specific day:
+
 ```bash
 npm run day src/2025/day01/solution.ts
 ```
 
 Run with watch mode (auto-rerun on save):
+
 ```bash
 tsx --watch src/2025/day01/solution.ts
 ```
@@ -31,11 +36,13 @@ tsx --watch src/2025/day01/solution.ts
 ### Creating a New Day
 
 Use the setup script to scaffold a new day:
+
 ```bash
 ./setup-day.sh 1
 ```
 
 This creates:
+
 - `src/2025/dayXX/solution.ts` - Solution template
 - `src/2025/dayXX/input.txt` - Your puzzle input (paste from AoC)
 - `src/2025/dayXX/example.txt` - Example input from puzzle description
@@ -68,6 +75,7 @@ advent-of-code/
 The `src/utils/` directory contains helpful functions for common AoC patterns:
 
 ### Input Parsing (`input.ts`)
+
 - `readInput()` - Read entire file as string
 - `readLines()` - Read as array of lines
 - `readNumbers()` - Read as array of numbers
@@ -75,6 +83,7 @@ The `src/utils/` directory contains helpful functions for common AoC patterns:
 - `readBlocks()` - Read blocks separated by blank lines
 
 ### Grid Operations (`grid.ts`)
+
 - `DIRECTIONS` - Cardinal direction vectors (N, S, E, W)
 - `DIRECTIONS_8` - All 8 directions including diagonals
 - `inBounds()` - Check if position is within grid
@@ -82,18 +91,21 @@ The `src/utils/` directory contains helpful functions for common AoC patterns:
 - `printGrid()` - Debug print a grid
 
 ### Math (`math.ts`)
+
 - `gcd()` - Greatest Common Divisor
 - `lcm()` - Least Common Multiple
 - `sum()`, `product()` - Array aggregation
 - `range()` - Generate number ranges
 
 ### Collections (`collections.ts`)
+
 - `counter()` - Count occurrences
 - `groupBy()` - Group items by key
 - `uniqueBy()` - Get unique items by key
 - `chunk()` - Split array into chunks
 
 ### Search Algorithms (`search.ts`)
+
 - `bfs()` - Breadth-First Search
 - `dfs()` - Depth-First Search
 - `dijkstra()` - Shortest path with weights

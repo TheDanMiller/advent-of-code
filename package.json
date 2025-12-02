@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "tsx src/2025/day01/solution.ts",
     "solve": "tsx --watch src/2025/day01/solution.ts",
-    "day": "tsx"
+    "day": "tsx",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\""
   },
-  "keywords": ["advent-of-code", "typescript"],
+  "keywords": [
+    "advent-of-code",
+    "typescript"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "prettier": "^3.7.3",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
   }

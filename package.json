@@ -1,0 +1,19 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of Code solutions in TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/2025/day01/solution.ts",
+    "solve": "tsx --watch src/2025/day01/solution.ts",
+    "day": "tsx"
+  },
+  "keywords": ["advent-of-code", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

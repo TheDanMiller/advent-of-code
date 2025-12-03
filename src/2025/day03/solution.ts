@@ -61,7 +61,7 @@ function part2(input: string[]): number {
   for (const line of input) {
     let batteryBank = line.split('').map(Number);
     // console.log(batteryBank);
-    // Find the higest value with at least 11 numbers after it
+    // Find the highest value with at least 11 numbers after it
     // In the remaining numbers find the highest number with at least 10 numbers after it
     // Repeat until you have 12 total numbers
     // Create an integer by concatenating these numbers in order found

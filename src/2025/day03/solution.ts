@@ -1,4 +1,3 @@
-import { parse } from 'path';
 import { readInput, readLines } from '../../utils/input.js';
 
 const lines = readLines('input.txt', import.meta.url);

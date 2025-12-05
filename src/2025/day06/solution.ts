@@ -1,7 +1,6 @@
 import { readInput, readLines } from '../../utils/input.js';
 
 const input = readInput('input.txt', import.meta.url);
-const lines = readLines('input.txt', import.meta.url);
 
 function part1(input: string): number {
   // TODO: Implement Part 1

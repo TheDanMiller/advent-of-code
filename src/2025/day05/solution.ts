@@ -43,7 +43,7 @@ function part2(input: string[]): number {
       freshRanges.push([range[0], range[1]]);
     } else {
       freshRanges.push([range[1], range[0]]);
-      console.warn('Backwrds range found', range);
+      console.warn('Backwards range found', range);
     }
   }
 

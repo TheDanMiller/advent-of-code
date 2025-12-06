@@ -37,8 +37,8 @@ export const inBounds = (grid: any[][], x: number, y: number): boolean => {
  */
 export const getNeighbors = (grid: any[][], x: number, y: number): Point[] => {
   return Object.values(DIRECTIONS)
-    .map(d => ({ x: x + d.x, y: y + d.y }))
-    .filter(p => inBounds(grid, p.x, p.y));
+    .map((d) => ({ x: x + d.x, y: y + d.y }))
+    .filter((p) => inBounds(grid, p.x, p.y));
 };
 
 /**
@@ -46,8 +46,8 @@ export const getNeighbors = (grid: any[][], x: number, y: number): Point[] => {
  */
 export const getNeighbors8 = (grid: any[][], x: number, y: number): Point[] => {
   return Object.values(DIRECTIONS_8)
-    .map(d => ({ x: x + d.x, y: y + d.y }))
-    .filter(p => inBounds(grid, p.x, p.y));
+    .map((d) => ({ x: x + d.x, y: y + d.y }))
+    .filter((p) => inBounds(grid, p.x, p.y));
 };
 
 /**
@@ -57,4 +57,22 @@ export const printGrid = (grid: any[][]): void => {
   for (const row of grid) {
     console.log(row.join(''));
   }
+};
+
+export const rotateGrid90 = (grid: any[][]): any[][] => {
+  const numRows = grid.length;
+  const numCols = grid[0].length;
+
+  // Create a new matrix for the rotated result
+  const rotatedMatrix = Array(numCols)
+    .fill(0)
+    .map(() => Array(numRows).fill(0));
+
+  for (let i = 0; i < numRows; i++) {
+    for (let j = 0; j < numCols; j++) {
+      // The element at (i, j) in the original matrix moves to (j, numRows - 1 - i)
+      rotatedMatrix[j][numRows - 1 - i] = grid[i][j];
+    }
+  }
+  return rotatedMatrix;
 };
